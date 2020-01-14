@@ -3,14 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:swkAppCenter="clr-namespace:SWKAppCenter;assembly=SWKAppCenter"
              mc:Ignorable="d"
              x:Class="SWKAppCenter.MainPage">
+    <ContentPage.BindingContext>
+        <swkAppCenter:MainPageViewModel />
+    </ContentPage.BindingContext>
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label Text="Welcome to Money Dude!" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="Start" />
+        <Button Text="New Account" Command="{Binding NewAccount}" />
+        <Button Text="Add Transaction" Command="{Binding AddTransaction}" />
+        <Button Text="Open Reports" Command="{Binding AddTransaction}" />
     </StackLayout>
 
 </ContentPage>
