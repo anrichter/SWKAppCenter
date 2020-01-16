@@ -15,6 +15,7 @@ namespace SWKAppCenter
 
         private void OpenReportsExecute(object obj)
         {
+
         }
 
         private void NewAccountExecute(object obj)
