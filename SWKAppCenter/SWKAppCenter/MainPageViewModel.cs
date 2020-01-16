@@ -1,6 +1,9 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 
 namespace SWKAppCenter
@@ -15,15 +18,25 @@ namespace SWKAppCenter
 
         private void OpenReportsExecute(object obj)
         {
-
+            try
+            {
+                throw new ArgumentNullException();
+            }
+            catch (Exception exception)
+            {
+                Crashes.TrackError(exception);
+            }
         }
 
         private void NewAccountExecute(object obj)
         {
+            Analytics.TrackEvent("New Account created");
         }
 
         private void AddTransactionExecute(object obj)
         {
+            Analytics.TrackEvent("Transaction added");
+
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

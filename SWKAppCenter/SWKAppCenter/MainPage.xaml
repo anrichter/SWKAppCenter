@@ -17,7 +17,7 @@
            VerticalOptions="Start" />
         <Button Text="New Account" Command="{Binding NewAccount}" />
         <Button Text="Add Transaction" Command="{Binding AddTransaction}" />
-        <Button Text="Open Reports" Command="{Binding AddTransaction}" />
+        <Button Text="Open Reports" Command="{Binding OpenReports}" />
     </StackLayout>
 
 </ContentPage>

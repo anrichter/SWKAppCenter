@@ -1,4 +1,7 @@
 ﻿using System;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +18,9 @@ namespace SWKAppCenter
 
         protected override void OnStart()
         {
+            AppCenter.Start("android=5a84af21-2bda-4040-b05d-5f1bfd22a345;" +
+                            "ios=c9dc5819-6a2e-4e48-8bc3-0a54f2c6f41b",
+                typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()
